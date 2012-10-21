@@ -1,0 +1,26 @@
+Testing pipeline for CRAN dmt package 
+http://dmt.r-forge.r-project.org/
+(C) Leo Lahti 2008-2011. FreeBSD license.
+Contact: Leo Lahti <leo.lahti at iki.fi>
+
+
+== Testing ==
+
+Collect all test statistics in one file by running
+complete/test.stats.R
+
+The complete test statistics is at
+complete/test.stats.txt
+
+
+== Directories ==
+
+* complete/
+
+Test scripts for the dmt package with toy data for most possible use
+cases. 
+
+
+* devel/
+
+Scripts for further tests under development.

@@ -1,0 +1,66 @@
+
+#######################
+
+- tests/pfa.nnW.R this is otherwise ok fit but the scales go hugely
+   wrong. Compare the cost function with the correct and optimized
+   solutions. Is the problem just due to local optima or is the cost
+   function incorrect?
+
+- case where p > n should work with nonmatched/nonneg case: test
+  -> also list where else it should get working
+
+- Case 0 < Nm.wx.wy.sigma < Inf still untested;
+  including W>=0 and W free.
+
+- tests/pcca.nnW.R joskus jaa jumittaan pitkaksi aikaa, kehita niksi
+
+- nonregularized cca ( = ordinary CCA) with full covariances
+  (depmod.R)does not converge properly, although this is one of the
+  special cases and should have no problems. Check asap. Use pCCA for
+  optimization instead if needed. Equals to that case.
+
+- convergence measure in optimization: improve. now does not allow any
+  drawbacks in optimization (cost function increase) which may be
+  unoptimal- follow convergence for a couple of steps instead
+  
+- simcca.nnW and cca.nnW are unstable with zDim = 1. Check and correct.
+
+- speedups for isotropic case in (sim)cca.nnW; combine optimization
+  routines with ppca/pfa/pcca.
+
+- tests/pcca2.R one methods much better than other, check
+  also some failure. is it optimization of W or phi which goes wrong?
+  phi values are ok. in each
+
+- varmista, etta fit.dependency.model defaulteilla saadaan samat ku
+  ppca, pfa, pcca wrappereilla kun vain kovarianssirakenteita muutetaan.
+  esimerkki tests/pcca.R lopussa
+
+- clear documentation and website 
+
+- pcca:ssa epäilyttävän heikkoja korrelaatioita estimaattien ja
+todellisuuden välillä. varmista vielä. (tests/pcca.R).
+
+- simcca-wrapperi?
+
+##########################################
+
+Functionality to add
+
+* Bayesian PCA, R scripts under GPL3 available at
+  http://www.bioconductor.org/packages/release/bioc/html/pcaMethods.html
+  (ask if it is possible to reuse code under FreeBSD - this would be a useful add on for later developments)
+
+* Compare ppca of dmt to other implementations of ppca in 
+  http://www.bioconductor.org/packages/release/bioc/html/pcaMethods.html
+  in terms of speed and accuracy?
+
+* multiWayCCA
+  - add licence info
+  - installation instructions
+  - add dependencies. at least mvtnorm
+  - make a working package
+
+
+
+

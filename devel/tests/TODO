@@ -1,0 +1,127 @@
+# Standard pca/fa/cca 
+
+# Wx != Wy
+# W free
+
+tests/ppca.R
+OK ppca 1 dataset
+OK ppca 2 datasets
+
+tests/pfa.R
+OK pfa 1 dataset
+OK pfa 2 datasets
+
+tests/pcca.R
+OK pcca 2 datasets
+
+TODO pcca witn isotropic margins
+
+################################
+
+# using fit.dependency.model function
+
+# Wx != Wy
+# W free
+# Should correspond to standard pca/fa/cca 
+
+ppca 1 dataset
+ppca 2 datasets
+
+pfa 1 dataset
+pfa 2 datasets
+
+pcca 2 datasets
+pcca witn isotropic margins
+
+#########################
+
+# Wx != Wy
+# W >= 0
+
+identical isotropic 1D
+identical isotropic ND
+
+isotropic 1D
+isotropic ND
+
+diagonal 1D
+diagonal ND
+
+full 1D
+full ND
+
+#####################
+
+# Wx = Wy (or Wy = TWx)
+# W >= 0
+
+identical isotropic 1D
+identical isotropic ND
+
+isotropic 1D
+isotropic ND
+
+diagonal 1D
+diagonal ND
+
+full 1D
+full ND
+
+
+#####################
+
+# Wx = Wy (or Wy = TWx)
+# W free
+
+identical isotropic 1D
+identical isotropic ND
+
+isotropic 1D
+isotropic ND
+
+diagonal 1D
+diagonal ND
+
+full 1D
+full ND
+
+#########################
+
+# Wx ~ Wy
+# W free
+
+identical isotropic 1D
+identical isotropic ND
+
+isotropic 1D
+isotropic ND
+
+diagonal 1D
+diagonal ND
+
+full 1D
+full ND
+
+########################
+
+# Wx ~ Wy
+# W >=0
+
+identical isotropic 1D
+identical isotropic ND
+
+isotropic 1D
+isotropic ND
+
+diagonal 1D
+diagonal ND
+
+full 1D
+full ND
+
+#########################
+
+Implement: 
+# Wx != Wy; W sparse
+# Wy fixed, only optimize Wx (regression-type models)
+# Wx ~ Wy with T priors when dx != dy
