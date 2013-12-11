@@ -20,7 +20,8 @@ library(dmt)
 N <- 100
 xdim <- 10
 zdim <- 3
-toy <- generate.toydata(N = N, zDim = zdim, xDim = xdim, yDim = xdim, marginal.covariances = "diagonal")
+toy <- generate.toydata(N = N, zDim = zdim, xDim = xdim, yDim = xdim, 
+               marginal.covariances = "diagonal")
 # Estimate model parameters
 res <- pfa(toy$X, zDimension = zdim)
 W <- res@W$total

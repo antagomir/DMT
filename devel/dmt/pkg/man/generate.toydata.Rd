@@ -2,7 +2,8 @@
 \alias{generate.toydata}
 \title{Toy data generation}
 \description{Generate simulated data which follows the distributional assumptions of the model.}
-\usage{generate.toydata(N = 100, zDim = 2, xDim = 3, yDim = 3, marginal.covariances = "full", priors = NULL)}
+\usage{generate.toydata(N = 100, zDim = 2, xDim = 3, yDim = 3, 
+          marginal.covariances = "full", priors = NULL)}
 \arguments{
   \item{N}{ Sample size. }
   \item{zDim}{ Dimensionality of the latent variable. }
@@ -21,5 +22,8 @@ List with the following components:
 \references{See citation("dmt") for references.}
 \author{Leo Lahti \email{leo.lahti@iki.fi}}
 %\seealso{\code{\link{help}}}
-\examples{ toy <- generate.toydata(N = 100, zDim = 1, xDim = 3, yDim = 3, marginal.covariances = "full") }
+\examples{ toy <- generate.toydata(N = 100, 
+                   zDim = 1, xDim = 3, yDim = 3, 
+                   marginal.covariances = "full") 
+}
 \keyword{ utilities }

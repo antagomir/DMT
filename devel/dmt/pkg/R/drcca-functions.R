@@ -295,8 +295,6 @@ random_eig <- function(train,fea,iter,row)
       #create random matrix from multivariate normal distribution
       # using training data
 
-      library("MASS")
-
       #################################################################
 
 
@@ -364,7 +362,6 @@ random <- function(mat,row)
 
         mu <- c(rep(0,length(v)))
 
-       require(MASS)
        rand <- mvrnorm(row,mu,sigma)
 
         return(rand);
