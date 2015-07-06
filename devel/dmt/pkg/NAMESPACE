@@ -54,3 +54,6 @@ getZ
 
 importFrom(graphics, plot)
 importFrom(Matrix, nearPD)
+import(methods)
+import(MASS)
+import(mvtnorm)
