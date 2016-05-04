@@ -43,19 +43,25 @@ initialize2 <- function (X, Y, zDim = NULL, marginalCovariances) {
 
   Nsamples <- ncol(X)
   Dim <- list(X = nrow(X), Y = nrow(Y), Z = zDim)
-  nullmat  <- matrix(0, nrow = Dim$X, ncol = Dim$Y)
+  nullmat  <- matrix(0, nrow = Dim$X, ncol = min(1, Dim$Y))
 
   if (marginalCovariances == "isotropic") {
     # Scalar values
     phi <- list()
     phi$X <- diag(var(as.vector(X)), Dim$X)
-    phi$Y <- diag(var(as.vector(Y)), Dim$Y)
+    if (!is.null(Y)) {
+      phi$Y <- diag(var(as.vector(Y)), Dim$Y)
+    }
     phi$total <- diag(c(diag(phi$X), diag(phi$Y)))
     #nullmat <- 0
   } else if (marginalCovariances == "identical isotropic") {
     # Scalar values phix = phiy
     phi <- list()
-    phi.est <- var(c(as.vector(X), as.vector(Y)))
+    if (!is.null(Y)) {
+      phi.est <- var(c(as.vector(X), as.vector(Y)))
+    } else {
+      phi.est <- var(as.vector(X))
+    }
     phi$X <- diag(phi.est, Dim$X)
     phi$Y <- diag(phi.est, Dim$Y)
     phi$total <- diag(c(diag(phi$X), diag(phi$Y)))    
@@ -63,10 +69,18 @@ initialize2 <- function (X, Y, zDim = NULL, marginalCovariances) {
   } else {
     # diagonal matrices
     # initialize with scalar diagonal noise on the marginals (shared by all features)
-    phi <- list(X = diag(var(as.vector(X)), Dim$X), 
-                Y = diag(var(as.vector(Y)), Dim$Y))  
-    phi$total <- rbind(cbind(phi$X,nullmat), cbind(t(nullmat), phi$Y))
+    if (!is.null(Y)) {      
+      phi <- list(X = diag(var(as.vector(X)), Dim$X), 
+                Y = diag(var(as.vector(Y)), Dim$Y))
+    } else {
+      phi <- list(X = diag(var(as.vector(X)), Dim$X))
+    }
 
+    if (!is.null(Y)) {      
+      phi$total <- rbind(cbind(phi$X,nullmat), cbind(t(nullmat), phi$Y))
+    } else {
+      phi$total <- cbind(phi$X,nullmat)
+    }
   }
 
   # FIXME: if phi$Y is scalar (as in segmented/mir case) we can speed up here. Do later.
@@ -74,7 +88,6 @@ initialize2 <- function (X, Y, zDim = NULL, marginalCovariances) {
   phi.inv  <- list()
   phi.inv$X <- solve(phi$X)
   phi.inv$Y <- solve(phi$Y)
-  #phi.inv$total <- rbind(cbind(phi.inv$X, nullmat), cbind(t(nullmat), phi.inv$Y))
 
   Dcov <- list()
   Dcov$X <- cov(t(X), use = "pairwise.complete.obs")

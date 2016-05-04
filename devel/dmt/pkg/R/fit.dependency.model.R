@@ -26,6 +26,7 @@ fit.dependency.model <- function (X, Y,
   # with various modeling assumptions
 
   if ( verbose ) { cat("Checking data\n") }
+
   dat <- check.data(X, Y, zDimension)
   X <- dat$X
   Y <- dat$Y
@@ -33,8 +34,9 @@ fit.dependency.model <- function (X, Y,
   intercept <- dat$intercept
        
   # FIXME store/return intercepts as well; further dependency models including intercepts
-  if ( nrow(X) < nrow(Y) ) {stop("If the two data matrices do not have equal dimensionality, place the smaller one in Y.")} # FIXME automate
-  if ( !nrow(X) == nrow(Y) ) {
+  if (!is.null(Y) && (nrow(X) < nrow(Y)) ) {stop("If the two data matrices do not have equal dimensionality, place the smaller one in Y.")} # FIXME automate
+  
+  if ( !is.null(Y) && !nrow(X) == nrow(Y) ) {
     #message("The data sets have unequal dimensionality.")
     if ( matched ) { stop("Cannot use matched methods for nonmatched data.") }
   }
@@ -114,11 +116,9 @@ fit.dependency.model <- function (X, Y,
       # The smaller, the flatter tail.
 
       # TODO: implement sparsity prior W ~ N(0, sd*I)
-
-      res <- optimize.parameters(X, Y, zDim = zDimension, priors = priors,                                                                 
+      res <- optimize.parameters(X, Y, zDim = zDimension, priors = priors,
                                    marginalCovariances = marginalCovariances,           
                                    epsilon = epsilon, convergence.steps = 3, verbose = verbose)
-
       method <- "Free Wx ~ Wy with exponential priors for Wx and Wy. Check marginal covariances from parameters."
 	
     }

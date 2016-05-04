@@ -1,13 +1,8 @@
 Package: dmt
 Type: Package
 Title: Dependency Modeling Toolkit
-<<<<<<< HEAD
-Version: 0.8.12
-Date: 2013-04-08
-=======
 Version: 0.8.20
 Date: 2013-12-10
->>>>>>> dd0dc685aaf9325d9daac46f47b8737526fd4362
 Author: Leo Lahti and Olli-Pekka Huovilainen
 Maintainer: Leo Lahti <leo.lahti@iki.fi>
 Description: Probabilistic dependency modeling toolkit. 
