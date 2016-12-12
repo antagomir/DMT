@@ -6,5 +6,3 @@ setClass("DependencyModel",
                         params = "list",
                         data = "list",
                         z = "matrix"))
-
-

@@ -21,8 +21,6 @@ NULL
 
 
 
-
-
 #' Example data for drCCA
 #' 
 #' Randomly generated data set for the examples.  Data matrix with 2000 rows
