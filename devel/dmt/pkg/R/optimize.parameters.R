@@ -1,7 +1,3 @@
-# (C) 2008-2011 Leo Lahti and Olli-Pekka Huovilainen          
-# All rights reserved. 
-# FreeBSD License (keep this notice)     
-
 # Part of the inhumanity of the computer is that, once it is competently
 # programmed and working smoothly, it is completely honest.
 # - Isaac Asimov 
@@ -23,6 +19,7 @@ optimize.parameters <- function (X, Y, zDim = 1, priors = NULL,
 
   if ( verbose ) { cat("Initialize\n") }
   inits <- initialize2(X, Y, zDim, marginalCovariances)
+
   phi <- inits$phi
   phi.inv <- inits$phi.inv
   W <- inits$W
@@ -152,8 +149,12 @@ optimize.parameters <- function (X, Y, zDim = 1, priors = NULL,
       } else if ( priors$Nm.wxwy.sigma > 0 && priors$Nm.wxwy.sigma < Inf ) { # Wx ~ Wy constrained
 
         # Update W: initialize with previous W			       
-        opt <- optim(c(as.vector(W$X), as.vector(T)), cost.W, method = "L-BFGS-B", phi = phi, priors = priors, Dim = Dim, Dcov = Dcov,
-               control = list(maxit = 1e6),lower = -10*max(Dcov$total), upper = 10*max(Dcov$total))
+        opt <- optim(c(as.vector(W$X), as.vector(T)), cost.W,
+	               method = "L-BFGS-B", phi = phi, priors = priors,
+		       Dim = Dim, Dcov = Dcov,
+               control = list(maxit = 1e6),
+	       lower = -10*max(Dcov$total),
+	       upper = 10*max(Dcov$total))
       
         # Convert optimized W parameter vector to actual matrices
         wt <- get.W(opt$par, Dim)
@@ -200,46 +201,23 @@ optimize.parameters <- function (X, Y, zDim = 1, priors = NULL,
 
    } else if (marginalCovariances == "isotropic") {
 
-        # M and beta Possibly useful for speedups later, when 
-	# considering joint analysis of W and phi
-        # set.M is for isotropic X or Y
-	# these should OK without modifications here.
-        #M <- list()
-        #M$X <- set.M(W$X, phi$X)
-        #M$Y <- set.M(W$Y, phi$Y)      
-        #beta <- list()
-        #beta$X <- set.beta(M$X, W$X, phi$X)
-        #beta$Y <- set.beta(M$Y, W$Y, phi$Y)
-        # FIXME: if this is not used, remove M and beta
-        # however check their use in W update
-        #phi <- update.phi(Dcov, M, beta, W, phi)
-	
 	# FIXME: speed up by using scalars as in the ppca/pfa/pcca
         phi.scalar.x <- unique(diag(phi$X))
         phi.scalar.y <- unique(diag(phi$Y))	
-        phi$X <- update.phi.isotropic(Dcov$X, W$X, phi.scalar.x, Dim$X)
-        phi$Y <- update.phi.isotropic(Dcov$Y, W$Y, phi.scalar.y, Dim$Y)
+        phi$X <- update_phi_isotropic(Dcov$X, W$X, phi.scalar.x, Dim$X)
+        phi$Y <- update_phi_isotropic(Dcov$Y, W$Y, phi.scalar.y, Dim$Y)
 
         # convert to matrices
 	phi$X <- diag(phi$X, Dim$X)
 	phi$Y <- diag(phi$Y, Dim$Y)
 	phi$total <- diag(c(diag(phi$X), diag(phi$Y)))
 
-        # FIXME: update.phi.isotropic possibly also usable here
-	# but perhaps slower; update.phi is just an empirical estimate
-	# the ML used in identical isotropic would be better
-
      } else if (marginalCovariances == "identical isotropic") {
-
-        # FIXME: perhaps using similar implementation with "isotropic"
-	# (separately for X and Y)
-	# would be faster and about as accurate? test.
 
         # Calling set.M.isotropic
 	# FIXME: speed up by using scalars as in the ppca/pfa/pcca
         phi.scalar <- unique(diag(phi$total))
-        phi.estimate <- update.phi.isotropic(Dcov$total, W$total, phi.scalar, Dim$X + Dim$Y)
-	#phi <- list(X = phi.estimate, Y = phi.estimate)
+        phi.estimate <- update_phi_isotropic(Dcov$total, W$total, phi.scalar, Dim$X + Dim$Y)
 
         # convert to matrices
 	phi$X <- diag(phi.estimate, Dim$X)
@@ -308,15 +286,6 @@ optimize.parameters <- function (X, Y, zDim = 1, priors = NULL,
     cat(paste("Iterations OK.\n"))
     
   }
-
-  # FIXME
-  # Needed later if phis are treated as scalars
-  #if (marginalCovariances == "isotropic" || marginalCovariances == "identical isotropic") {
-  #  # force these scalars into diagonal matrices
-  #  phi$X <- diag(phi$X, nrow(X))
-  #  phi$Y <- diag(phi$Y, nrow(Y))
-  #  phi$total <- diag(c(diag(phi$X),diag(phi$Y)),(nrow(X)+nrow(Y)))
-  #}
 
   W$total <- rbind(W$X, W$Y)  
   rownames(W$X) <- rownames(X)

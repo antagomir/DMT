@@ -1,13 +1,13 @@
-# (C) 2008-2011 Leo Lahti and Olli-Pekka Huovilainen          
-# All rights reserved. 
-# FreeBSD License (keep this notice)     
-
-
-# "In science the credit goes to the man who convinces the world, not the
-#  man to whom the idea first occurs."
-# - Sir Francis Darwin
-
-update.phi.isotropic <- function (Xcov, W, epsilon, dx) {
+#' @title Update Phi (Isotropic)
+#' @description Update Phi (Isotropic).
+#' @param Xcov Data
+#' @param W W
+#' @param epsilon epsilon
+#' @param dx dx
+#' @return numeric
+#' @author Olli-Pekka Huovilainen and Leo Lahti \email{leo.lahti@@iki.fi}
+#' @export
+update_phi_isotropic <- function (Xcov, W, epsilon, dx) {
 
   # used to update phix and phiy, one at a time
 
@@ -135,14 +135,12 @@ phi.diagonal.single <- function (W, phi.inv, Cxx, Dim) {
 
 phi.diagonal.double <- function (W, phi.inv, Cxx, Dim) {
 
-  #phi.diagonal.double(W$total, phi.inv¡ëtotal, Dcov$total, Dim) {
-
   # phi.diagonal.single with Cxx = Dcov$total
   # should give the same result for phi$total. Check.
 
   # solving both phix and phiy at once
 
-  # Y.rubin is Y in (Rubin & Thayer, 1982)
+  # Y.rubin is Y in (Rubin Thayer, 1982)
   # Variables on columns and samples on rows
 
   #Y.rubin <- cbind(t(X), t(Y))

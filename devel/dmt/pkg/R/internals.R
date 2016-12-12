@@ -1,13 +1,4 @@
-
-# (C) 2008-2011 Leo Lahti and Olli-Pekka Huovilainen          
-# All rights reserved. 
-# FreeBSD License (keep this notice)     
-
-
 check.data <- function (X, Y, zDimension = NULL) {
-
-  # (C) Leo Lahti 2010-2012
-  # FreeBSD license (keep this notice).
 
   if (is.null(zDimension)) { 
     # No latent dimensionality specified: using full latent dim
@@ -77,8 +68,6 @@ SqrtInvMat <- function( matrix ) {
 concatenate <- function(datasets)
 {
 
-  # (C) Abhishek Tripathi and Leo Lahti
-  # FreeBSD license (keep this notice).
   mat <- datasets #list of data sets
 
   m <- length(mat)

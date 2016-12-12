@@ -1,13 +1,8 @@
-# (C) 2008-2012 Leo Lahti and Olli-Pekka Huovilainen          
-# All rights reserved. 
-# FreeBSD License (keep this notice)     
-
-
 # "The mathematics is not there till we put it there."
 # - Sir Arthur Eddington, The Philosophy of Physical Science
 
 
-update.W.singledata <- function (Wt, X, phi, priors = NULL) {
+update_W_singledata <- function (Wt, X, phi, priors = NULL) {
 
   # Optimize W for PFA and PPCA models
   
@@ -50,6 +45,42 @@ wprior <- function (vec, rate) {
 #wprior.c <- cmpfun(wprior)
 
 
+
+
+#' @title Likelihood for the models.
+#' 
+#' @description Likelihood functions for the implemented models.
+#' 
+#' @details Other likelihood functions will be added later.
+#' 
+#' @param Wvec Parameter vector which is converted in the latent covariance
+#' structure used in PFA, correspond to W*t(W) in the model X = Wz + epsilon.
+#' @param phi Marginal covariance in the model X = Wz + epilon with epsilon ~
+#' N(0, phi).
+#' @param X Data: features x samples matrix.
+#' @return Log-likelihood of the data, given the model parameters.
+#' @author Leo Lahti \email{leo.lahti@@iki.fi}
+#' @seealso fit.dependency.model, pfa
+#' @references See citation("dmt").
+#' @keywords utilities
+#' @export
+#' @examples
+#' 
+#' library(dmt)
+#' # Generate toydata
+#' N <- 100
+#' xdim <- 10
+#' zdim <- 3
+#' toy <- generate.toydata(N = N, zDim = zdim, xDim = xdim, yDim = xdim, 
+#'                marginal.covariances = "diagonal")
+#' # Estimate model parameters
+#' res <- pfa(toy$X, zDimension = zdim)
+#' W <- res@W$total
+#' phi <- res@phi$total
+#' # wtw <- crossprod(t(W)) # is the same as W * t(W)
+#' # Calculate negative log-likelihood for the model
+#' L <- pfa.neg.log.likelihood(W, phi,toy$X)
+#' 
 pfa.neg.log.likelihood <- function (Wvec, phi, X) {
 
   # Cost function for W in the PFA model. 
@@ -82,10 +113,6 @@ pfacost <- function (n, k, X) {
 
 
 cost.W <- function (vec, phi, priors, Dim, Dcov) {
-
-  # (C) 2008-2011 Leo Lahti and Olli-Pekka Huovilainen          
-  # All rights reserved. 
-  # FreeBSD License (keep this notice)     
 
   # Wx ~ Wy constrained
   # no W prior
@@ -124,12 +151,7 @@ cost.W <- function (vec, phi, priors, Dim, Dcov) {
 
 cost.W.exponential <- function (vec, phi, priors = NULL, Dim, Dcov) {
 
-  # (C) 2008-2011 Leo Lahti and Olli-Pekka Huovilainen          
-  # All rights reserved. 
-  # FreeBSD License (keep this notice)     
-
-  # allows exponential prior for W
-  # in general, Wx != Wy
+  # Allows exponential prior for W; in general, Wx != Wy
 
   # remove sign as we assume W always positive here
   vec <- abs(vec)
@@ -173,10 +195,6 @@ cost.W.exponential <- function (vec, phi, priors = NULL, Dim, Dcov) {
 }
 
 cost7 <- function (Wvec, phi, Dcov, Dim, priors) {
-
-  # (C) 2008-2011 Leo Lahti and Olli-Pekka Huovilainen          
-  # All rights reserved. 
-  # FreeBSD License (keep this notice)     
 
   # SimCCA: identical Wx = Wy
   # allows W prior
@@ -267,10 +285,6 @@ W.simcca.EM <- function (W, phi, Dim, Dcov) {
 	
 solve.w <- function (Xc, Yc, Cxx, Cyy, dz = NULL) {
 
-  # (C) 2008-2011 Leo Lahti and Olli-Pekka Huovilainen          
-  # All rights reserved. 
-  # FreeBSD License (keep this notice)     
-
   # FIXME: compare with the other W updates, e.g. W.cca.EM
 
   # assumes Xc, Yc : samples x features, zero-mean features
@@ -312,10 +326,6 @@ solve.w <- function (Xc, Yc, Cxx, Cyy, dz = NULL) {
 }
 
 solve.archambeau <- function (X, Y, Wx, Wy, btb.x, btb.y) {
-
-  # (C) 2008-2011 Leo Lahti and Olli-Pekka Huovilainen          
-  # All rights reserved. 
-  # FreeBSD License (keep this notice)     
 
   # Use the trick introduced in Archambeau et al., ICML 2006. Robust
   # probabilistic projections, and the later correction appendix.

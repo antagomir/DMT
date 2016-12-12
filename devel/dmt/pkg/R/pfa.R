@@ -1,12 +1,20 @@
-# (C) 2008-2013 Olli-Pekka Huovilainen and Leo Lahti 
-# All rights reserved.
-# FreeBSD license (keep this notice).
-
 # 'Computation is a new microscope for studying massive data sets.'
 # 	      	   - @antagomir 2010
 
-
-
+#' @title Probabilistic Factor Analysis 
+#' @description Probabilistic factor analysis.
+#' @param X X
+#' @param Y Y
+#' @param zDimension zDimension
+#' @param includeData includeData
+#' @param calculateZ calculateZ
+#' @param priors priors
+#' @return pfa model
+#' @author Leo Lahti \email{leo.lahti@@iki.fi}
+#' @references See citation("dmt").
+#' @keywords utilities
+#' @examples #
+#' @export
 pfa <- function (X, Y = NULL,
                  zDimension = NULL,
                  includeData = TRUE,
@@ -105,10 +113,10 @@ calc.pfa <- function (X, Y, zDimension, priors = NULL) {
       #message("Analytical optimization")      
       Wt  <- solve(t(d)%*%cyd + D)%*%t(cyd) # WORKS    
       # Also obtained with numerical optimization:
-      # Wt <- update.W.singledata(Wt, X, tau2)
+      # Wt <- update_W_singledata(Wt, X, tau2)
     } else if (!is.null(priors$W) && priors$W > 0) {
       #message("Numerical optimization")
-      Wt <- update.W.singledata(Wt, X, tau2, priors)
+      Wt <- update_W_singledata(Wt, X, tau2, priors)
     }
     
     # Update margin/s 

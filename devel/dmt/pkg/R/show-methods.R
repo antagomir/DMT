@@ -1,9 +1,3 @@
-# (C) 2008-2011 Leo Lahti and Olli-Pekka Huovilainen          
-# All rights reserved. 
-# FreeBSD License (keep this notice)     
-
-
-
 # "Passion makes the world go round. Love just makes it a safer place."
 # - Ice T, The Ice Opinion
 	

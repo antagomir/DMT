@@ -1,3 +1,67 @@
+#' A function to combine several data sets
+#' 
+#' 
+#' Performs drCCA on a collection of data sets with co-occurring samples. The
+#' method utilizes regularized canonical correlation analysis to find linear
+#' projections for each of the data sets, and uses those to construct a
+#' combined representation of lower dimensionality than the original
+#' collection. The method suggests a specific dimensionality for the combined
+#' representation, but it is possible to obtain also combined data sets of
+#' different dimensionality.
+#' 
+#' 
+#' The function uses \code{\link{regCCA}} to perform the canonical correlation
+#' analysis. The dimensionality of the combined data set is selected using a
+#' statistical test that aims to find which dimensions capture shared variation
+#' significantly more than what would be found under the assumption that the
+#' data sets were independent. For this purpose rnand collections of random
+#' matrices with similar variance structure but no between-data dependencies
+#' are created. The amount of variation each dimension extracts from leave-out
+#' data in the cross-validation setting with nfold folds is compared to the
+#' distribution obtained from the random matrices, and the dimensions that
+#' differ significantly from the null hypothesis of independence are kept in
+#' the combined representation. For details, please check the reference.
+#' 
+#' 
+#' @param datasets A list containing the data matrices to be combined.  Each
+#' matrix needs to have the same number of rows (samples), but the number of
+#' columns (features) can differ.  Each row needs to correspond to the same
+#' sample in every matrix.
+#' @param reg
+#' 
+#' Regularization parameter for the whitening step used to remove data-set
+#' specific variation. The value of parameter must be between 0 and 1. The
+#' default value is set to 0, which means no regularization will be used. If a
+#' non-zero value is given it means that some of the dimensions with the lowest
+#' variance are ignored when whitening. In more technical terms, the dimensions
+#' whose total contribution to the sum of eigenvalues of the covariance matrix
+#' of each data set is below reg will not be used for the whitening.
+#' @param nfold The number of cross-validation folds used in the automatic
+#' dimensionality estimation process. The default value is 3.
+#' @param nrand The number of random comparison data-sets created for the
+#' automatic dimensionality estimation process. The default value is 50.
+#' @return
+#' 
+#' The function returns a list of two values.
+#' 
+#' \item{proj}{The representation obtained by combining the source data sets.
+#' This is a matrix that contains a feature representation for each of the
+#' samples in the analyzed collection. Each row in this result matches the
+#' corresponding row in the original data sets.} \item{n}{The number of
+#' dimensions in the combined representation. This is equal to ncol(proj).}
+#' @author Abhishek Tripathi \email{abhishektripathi.at@@gmail.com}, Arto Klami
+#' @seealso \code{\link{regCCA}}
+#' @references Tripathi A., Klami A., Kaski S. (2007), Simple integrative
+#' preprocessing preserves what is shared in data sources.
+#' @keywords multivariate
+#' @examples
+#' 
+#' 
+#'     # data(expdata1)
+#'     # data(expdata2)
+#'     # drCCAcombine(list(expdata1,expdata2),0,2,3)
+#' 
+#' @export 
 drCCAcombine <- function(datasets, reg = 0, nfold = 3, nrand = 50)
 {
 
@@ -546,9 +610,75 @@ random <- function(mat,row)
 # 4. x$meanvec <- array of columnwise means for each data matrix
 # 5. x$white <- array of whitening matrices for each data matrix
 
- "regCCA" <- 
- function(datasets,reg = 0)
-{
+
+
+#' Generalized Canonical Correlation Analysis
+#' 
+#' Solve generalized CCA. Contains a possibility to regularize the solution to
+#' reduce the effect of noise.
+#' 
+#' The function implements generalized CCA by explicitly whitening the data
+#' sets and then performing a principal component analysis on the collection of
+#' whitened data sets, instead of directly solving the generalized
+#' eigenproblem. Singular value decomposition is used for both the whitening
+#' and the PCA phase, and row-wise mean values of each data set are removed
+#' before whitening.
+#' 
+#' @param datasets A list containing the data matrices to be analyzed.  Each
+#' matrix needs to have the same number of rows (samples), but the number of
+#' columns (features) can differ.  Each row needs to correspond to the same
+#' sample in every matrix.
+#' @param reg
+#' 
+#' Regularization parameter for the whitening step used to remove data-set
+#' specific variation. The value of parameter must be between 0 and 1. The
+#' default value is set to 0, which means no regularization will be used. If a
+#' non-zero value is given it means that some of the dimensions with the lowest
+#' variance are ignored when whitening. In more terms, the dimensions whose
+#' total contribution to sum of eigenvalues of the covariance matrix of each
+#' data set is below reg will not be used for the whitening.
+#' @return The function returns a list with following components
+#' 
+#' \item{eigval}{Generalized canonical correlations. In case of two data sets
+#' (eigval-1) would give the correlations.} \item{eigvecs}{List of projection
+#' matrices, one for each data set. Each projection matrix is a N times m
+#' matrix where N is the number of samples and m is the total number of
+#' dimensions in all of the data sets.} \item{proj}{Projection of the original
+#' data sets by the corresponding projection matrices.}
+#' 
+#' \item{meanvec}{An array containing columnwise mean vectors for each data
+#' matrix} \item{white}{An array of whitening matrices for each data set. This
+#' might not be of user interest but this value is used as input in other
+#' functions in the package.}
+#' 
+#' The function also prints whether regularization was used or not.
+#' @author Abhishek Tripathi \email{abhishektripathi.at@@gmail.com}, Arto Klami
+#' @seealso \code{cancor},\code{prcomp},\code{svd}
+#' @references Hotelling H. (1936), Relations between two sets of variables,
+#' \emph{Biometrika}, \bold{28}, 321-327.
+#' 
+#' Kettenring J.R. (1971), Canonical Analysis of several sets of variables,
+#' \emph{Biometrika}, \bold{58:3}, 433-451.
+#' 
+#' Tripathi A., Klami A., Kaski S. (2007), Simple integrative preprocessing
+#' preserves what is shared in data sources.
+#' @keywords multivariate
+#' @examples
+#' 
+#' 
+#' #     data(expdata1)
+#' #     data(expdata2)
+#' 
+#'      #performing regCCA
+#' #    test <- regCCA(list(expdata1,expdata2),0) #list of result is stored in test
+#'  
+#' #     test$eigval #generalized canonical correlations
+#' #     test$eigvecs #gCCA components
+#' #     test$proj #projection of data onto gCCA components
+#' #     test$meanvec #array of columnwise mean vectors for each matrix
+#' #     test$white # array of whitening matrix
+#' @export
+regCCA <- function(datasets,reg = 0) {
  
     mat <- datasets #list of data matrices
   
@@ -798,6 +928,62 @@ drop <- function(mat,parameter)
 # output : a list of 2 vectors containing within data variation
 #          for cca projected data and for pca projected data
 
+
+
+#' Data-specific variation retained in the combined drCCA representation
+#' 
+#' A function for estimating the amount of data-set specific variation (i.e.
+#' variation that is not present in any of the other data sets) retained in the
+#' combined data set of given dimensionality.
+#' 
+#' The function estimates the amount of data-specific information retained in a
+#' previously calculated drCCA solution. The function uses SVD to estimate the
+#' variance of each data set in the drCCA projection of the given dimensions.
+#' Data-specific variance is defined as the sum of singular values for the
+#' covariance matrix of a data set. The value is normalized so that the
+#' variation for each of the original data sets is 1. The average of the
+#' data-specific variances in the projection is also calculated. A solution
+#' truly focusing on the dependencies usually has a value that grows roughly
+#' linearly when the number of dimensions is increased.  The function can also
+#' be used to estimate the same quantity for simple PCA projection of the
+#' concatenation of the data sets. This can be used as a comparison value. For
+#' details, please check the reference.
+#' 
+#' @param datasets A list containing the data matrices to be combined.  Each
+#' matrix needs to have the same number of rows (samples), but the number of
+#' columns (features) can differ.  Each row needs to correspond to the same
+#' sample in every matrix.
+#' @param regcca Output of \code{regCCA} function, containing the solution of
+#' the generalized CCA.
+#' @param dim The number of dimensions of projected data to be used
+#' @param pca A logical variable with default value FALSE. If the value is
+#' TRUE, the data-specific variation will also be calculated for the PCA
+#' projected data, where PCA is performed on the columnwise concatenation of
+#' the given data sets.
+#' @return The function returns a list of following values
+#' 
+#' \item{cc}{ Data Specific variation for a drCCA projection of given number of
+#' dimensions } \item{pc}{A vector containing the data-specific variations for
+#' a PCA projection of given dimensions, if pca = TRUE is given }
+#' \item{mcca}{Mean of data-specific variations for a drCCA projection}
+#' \item{mpca}{Mean of data-specific variation for a PCA projection, if pca =
+#' TRUE is given}
+#' @author Abhishek Tripathi \email{abhishektripathi.at@@gmail.com}, Arto Klami
+#' @seealso \code{\link{sharedVar}}
+#' @references Tripathi A., Klami A., Kaski S. (2007), Simple integrative
+#' preprocessing preserves what is shared in data sources.
+#' @keywords multivariate
+#' @examples
+#' 
+#' 
+#' #       data(expdata1)
+#' #       data(expdata2)
+#' #       r <- regCCA(list(expdata1,expdata2))
+#' 
+#' #       specificVar(list(expdata1,expdata2),r,4)
+#' 
+#' 
+#' 
 specificVar <- function(datasets, regcca, dim, pca = FALSE)
 {
 
@@ -1038,30 +1224,79 @@ specificVar <- function(datasets, regcca, dim, pca = FALSE)
 
 
 
-"sharedVar" <- 
-function(datasets,regcca,dimension,pca=FALSE)
-{
+
+
+#' Shared variation retained in the combined drCCA representation
+#' 
+#' A function for estimating the amount of shared variation (i.e. variation
+#' that is common to more than one data set) retained in the combined data set
+#' of given dimensionality.
+#' 
+#' The function estimates the amount of shared information retained in a
+#' previously calculated drCCA solution. It calculates the shared variation
+#' between all pairs of the data sets returned from drCCA combined data for a
+#' particular dimensionality. The function also calculates the same quantities
+#' for the original data and for the simple PCA projection of the concatenation
+#' of data sets. This can be used as a comparison value. If the full
+#' dimensionality of drCCA projection or the PCA projection is used, the sum of
+#' all pairs of shared variations will be the same. The mean of shared
+#' variations for drCCA and PCA is estimated, normalized in a way that the
+#' value for original data sets will be 1. A good result will have value
+#' greater than 1. For details please refer to the reference below.
+#' 
+#' @param datasets A list containing the data matrices to be combined.  Each
+#' matrix needs to have the same number of rows (samples), but the number of
+#' columns (features) can differ.  Each row needs to correspond to the same
+#' sample in every matrix.
+#' @param regcca Output of \code{regCCA} function, containing the solution of
+#' the generalized CCA.
+#' @param dimension The number of dimensions of projected data to be used
+#' @param pca A logical variable with default value FALSE. If the value is
+#' TRUE, the pairwise variation will also be calculated for the PCA projected
+#' data, where PCA is performed on the columnwise concatenation of the given
+#' data sets.
+#' @return A list of following elements is returned
+#' 
+#' \item{oo}{A matrix containing the pairwise shared variations for original
+#' data sets} \item{cc}{A matrix containing the pairwise shared variations for
+#' a drCCA projection of given dimensions } \item{pc}{A matrix containing the
+#' pairwise shared variations for a PCA projection of given dimensions, if pca
+#' = TRUE is given } \item{mcca}{Mean of shared variation between all pairs for
+#' drCCA} \item{mpca}{Mean of shared variation between all pairs for PCA, if
+#' pca = TRUE is given}
+#' @author Abhishek Tripathi \email{abhishektripathi.at@@gmail.com}, Arto Klami
+#' @seealso \code{\link{specificVar}}
+#' @references Tripathi A., Klami A., Kaski S. (2007), Simple integrative
+#' preprocessing preserves what is shared in data sources.
+#' @keywords multivariate
+#' @examples
+#' 
+#' 
+#'   #     data(expdata1)
+#'   #     data(expdata2)
+#'   #     r <- regCCA(list(expdata1,expdata2))
+#' 
+#'   #     sharedVar(list(expdata1,expdata2),r,4)
+#' 
+#' 
+#' @export
+sharedVar <- function(datasets, regcca, dimension, pca = FALSE) {
 
         mat <- datasets # list of data matrices
 
         cc <- regcca  # projection direction from regCCA
 
-        #print(length(cc))
-        #print(dim(cc[[3]]))
         eigV <- cc$eigvecs #, whitened projections directions
         proj <- cc$proj #, projected data from regCCA
         white <- cc$white #, whitening matrices from regCCA
         xmean <- cc$meanvec #, array of columnwise mean for each data matrix
 
-
         dim <- dimension #dimensions to be used for back projection
-
 
         m <- length(mat)
 
 #############################################################
 #####subroutines start here
-
 
 #subroutine 1
 reverse <- function(proj,dir,dim)
@@ -1329,8 +1564,64 @@ pwisepca <- function(mat,dim)
                        # for back projection
 #input 3. plot = FALSE , if it is TRUE, a plot will be generated
 
-plotVar <- function(datasets,regcca, dimVector, plot = FALSE)
-{
+
+
+#' Data-specific and shared variance for several dimensionalities
+#' 
+#' A function for calculating the captured variations for several different
+#' number of retained dimensions. This is a wrapper over \code{specificVar} and
+#' \code{sharedVar} to help computing both for a range of dimensionalities.
+#' 
+#' The function uses \code{specificVar} and \code{sharedVar} to do all the
+#' computation. The purpose of this function is to provide an easy way to
+#' visualize the properties of the reduced-dimensional representation created
+#' by drCCA. The function also estimates the same quantities for PCA of
+#' concatenated feature vectors to illustrate the difference to optimal linear
+#' model based on preserving the total variation in the whole collection of
+#' data sets.
+#' 
+#' @param datasets A list containing the data matrices to be combined.  Each
+#' matrix needs to have the same number of rows (samples), but the number of
+#' columns (features) can differ.  Each row needs to correspond to the same
+#' sample in every matrix.
+#' @param regcca Output of \code{regCCA} function, containing the solution of
+#' the generalized CCA.
+#' @param dimVector A list of dimensions for which the retained variations are
+#' to be computed.
+#' @param plot A logical variable with default value FALSE. If the value is
+#' TRUE, the functions creates a plot of the output.
+#' @return The function returns the data-specific and shared variance for the
+#' given values of dimensions in a list. The list has four components.
+#' 
+#' \item{pw_cca}{A vector with values as shared variances captured by drCCA for
+#' the given dimensions}
+#' 
+#' \item{pw_pca}{A vector with values as shared variances captured by PCA for
+#' the given dimensions}
+#' 
+#' \item{within_cca}{A vector with values as data-specific variances captured
+#' by drCCA for the given dimensions}
+#' 
+#' \item{within_pca}{A vector with values as data-specific variances captured
+#' by PCA for the given dimensions}
+#' @author Abhishek Tripathi, Arto Klami
+#' @seealso \code{\link{sharedVar}},\code{\link{specificVar}}
+#' @references Tripathi A., Klami A., Kaski S. (2007), Simple integrative
+#' preprocessing preserves what is shared in data sources, \emph{submitted for
+#' publication}.
+#' @keywords multivariate
+#' @examples
+#' 
+#' 
+#' #       data(expdata1)
+#' #       data(expdata2)
+#' #       r <- regCCA(list(expdata1,expdata2))#
+#' 
+#' #       plotVar(list(expdata1,expdata2),r,c(1:2),4)
+#' 
+#' 
+#' @export
+plotVar <- function(datasets,regcca, dimVector, plot = FALSE) {
 
         mat <- datasets        
 
@@ -1382,14 +1673,12 @@ plotVar <- function(datasets,regcca, dimVector, plot = FALSE)
    pw <- rbind(pwcca,pwpca)
    wn <- rbind(withcca,withpca)
 
-   #split.screen(c(2,1))
    par(mfrow=c(2,1))
    plot(pw[1,],t='l',xlab='Dimensionality of the projection', ylab='Shared variation', main='Shared variation, drCCA vs PCA(red)', ylim=c(min(pw),max(pw)))
    lines(pw[2,], col ='red')
-   #screen(2)
+
    plot(wn[1,],t='l',xlab='Dimensionality of the projection', ylab='Data-specific variation', main='Data-specific variation, drCCA vs PCA(red)', ylim=c(min(wn),max(wn)))
    lines(wn[2,], col='red')
-   #close.screen(all = TRUE)
   }
 
  return(list(pw_cca = pwcca, pw_pca = pwpca, within_cca = withcca, within_pca = withpca))

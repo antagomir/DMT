@@ -1,38 +1,39 @@
-# (C) 2008-2011 Leo Lahti and Olli-Pekka Huovilainen
-# All rights reserved.
-# FreeBSD License (keep this notice)
-
-
+#' @export
 setMethod("getW","DependencyModel", 
   function(model) { 
     return(model@W) 
   } 
 ) 
 
+#' @export
 setMethod("getPhi","DependencyModel", 
   function(model) { 
     return(model@phi) 
   } 
 ) 
 
+#' @export
 setMethod("getScore","DependencyModel", 
   function(model) { 
     return(model@score) 
   } 
 ) 
 
+#' @export
 setMethod("getParams","DependencyModel", 
   function(model) { 
     return(model@params) 
   } 
 ) 
 
+#' @export
 setMethod("getModelMethod","DependencyModel", 
   function(model) { 
     return(model@method) 
   } 
 ) 
 
+#' @export
 setMethod("getWindowSize","DependencyModel", 
   function(model) { 
     if (is.null(getW(model)$X)) {
@@ -44,6 +45,7 @@ setMethod("getWindowSize","DependencyModel",
   } 
 ) 
 
+#' @export
 setMethod("getZ","DependencyModel",
   function(model,X,Y) {
     if (length(model@z) > 0) {

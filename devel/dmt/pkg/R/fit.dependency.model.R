@@ -1,25 +1,139 @@
-# (C) 2008-2013 Olli-Pekka Huovilainen and Leo Lahti 
-# All rights reserved.
-# FreeBSD license (keep this notice).
-
-
-
 # "Computer Science is no more about computers than astronomy is about
 #  telescopes." 
 # - E. W. Dijkstra
 
-
-
+#' Fit dependency model between two data sets.
+#' 
+#' Fit generative latent variable model (see vignette for model specification)
+#' on two data sets. Regularize the solutions with priors, including
+#' constraints on marginal covariance structures, the structure of W, latent
+#' dimensionality etc. Probabilistic versions of PCA, factor analysis and CCA
+#' are available as special cases.
+#' 
+#' The \code{fit.dependency.model} function fits the dependency model X = N(W$X
+#' * Z, phi$X); Y = N(W$Y * Z, phi$Y) with the possibility to tune the model
+#' structure and parameter priors.
+#' 
+#' In particular, the dataset-specific covariance structure phi can be defined;
+#' non-negative priors for W are possible; the relation between W$X and W$Y can
+#' be tuned. For a comprehensive set of examples, see the example scripts in
+#' the tests/ directory of this package.
+#' 
+#' Special cases of the model, obtained with particular prior assumptions,
+#' include probabilistic canonical correlation analysis (\code{pcca};
+#' \cite{Bach & Jordan 2005}), probabilistic principal component analysis
+#' (\code{ppca}; \cite{Tipping & Bishop 1999}), probabilistic factor analysis
+#' (\code{pfa}; \cite{Rubin & Thayer 1982}), and a regularized version of
+#' canonical correlation analysis (pSimCCA; \cite{Lahti et al. 2009}).
+#' 
+#' The standard probabilistic PCA and factor analysis are methods for a single
+#' data set (X ~ N(WZ, phi)), with isotropic and diagonal covariance (phi) for
+#' pPCA and pFA, respectively. Analogous models for two data sets are obtained
+#' by concatenating the two data sets, and performing pPCA or pFA.
+#' 
+#' Such special cases are obtained with the following choices in the
+#' \code{fit.dependency.model} function:
+#' 
+#' \describe{
+#' 
+#' \item{pPCA}{ \code{marginalCovariances = "identical isotropic"}
+#' (\cite{Tipping & Bishop 1999}) }
+#' 
+#' \item{pFA}{ \code{marginalCovariances = "diagonal"} (\cite{Rubin & Thayer
+#' 1982}) }
+#' 
+#' \item{pCCA}{ \code{marginalCovariances = "full"} (\cite{Bach & Jordan 2005})
+#' }
+#' 
+#' \item{pSimCCA}{ \code{marginaCovariances = "full", priors =
+#' list(Nm.wxwy.mean = I, Nm.wxwy.sigma = 0)}. This is the default method,
+#' corresponds to the case with W$X = W$Y.  (\cite{Lahti et al. 2009}) }
+#' 
+#' \item{pSimCCA with T prior}{ \code{marginalCovariances = "isotropic", priors
+#' = list(Nm.wxwy.mean = 1, Nm.wx.wy.sigma = 1} (\cite{Lahti et al. 2009}) }}
+#' 
+#' To avoid computational singularities, the covariance matrix phi is
+#' regularised by adding a small constant to the diagonal.
+#' 
+#' @param X,Y Data set/s X and Y. 'Variables x samples'. The second data set
+#' (\code{Y}) is optional.
+#' @param zDimension Dimensionality of the shared latent variable.
+#' @param marginalCovariances Structure of marginal covariances, assuming
+#' multivariate Gaussian distributions for the dataset-specific effects.
+#' Options: \code{"identical isotropic"}, \code{"isotropic"}, \code{"diagonal"}
+#' and \code{"full"}. The difference between isotropic and identical isotropic
+#' options is that in isotropic model, phi$X != phi$Y in general, whereas with
+#' isotropic model phi$X = phi$Y.
+#' @param epsilon Convergence limit.
+#' @param priors Prior parameters for the model. A list, which can contain some
+#' of the following elements: \describe{ \item{W}{Rate parameter for
+#' exponential distribution (should be positive). Used to specify the prior for
+#' Wx and Wy in the dependency model. The exponential prior is used to produce
+#' non-negative solutions for W; small values of the rate parameter correspond
+#' to an uninformative prior distribution.} \item{Nm.wxwy.mean}{ Mean of the
+#' matrix normal prior distribution for the transformation matrix T. Must be a
+#' matrix of size (variables in first data set) x (variables in second data
+#' set). If value is \code{1}, \code{Nm.wxwy.mean} will be made identity matrix
+#' of appropriate size.} \item{Nm.wxwy.sigma}{ Variance parameter for the
+#' matrix normal prior distribution of the transformation matrix \code{T}.
+#' Described the allowed deviation scale of the transformation matrix \code{T}
+#' from the mean matrix \code{Nm.wxwy.mean}.} }
+#' @param matched Logical indicating if the variables (dimensions) are matched
+#' between X and Y. Applicable only when dimX = dimY. Affects the results only
+#' when prior on the relationship Wx ~ Wy is set, i.e. when
+#' priors$Nm.wx.wy.sigma < Inf.
+#' @param includeData Logical indicating whether the original data is included
+#' to the model output. Using \code{FALSE} can be used to save memory.
+#' @param calculateZ Logical indicating whether an expectation of the latent
+#' variable Z is included in the model output. Otherwise the expectation can be
+#' calculated with \code{getZ} or \code{z.expectation}. Using \code{FALSE}
+#' speeds up the calculation of the dependency model.
+#' @param verbose Follow procedure by intermediate messages.
+#' @return \linkS4class{DependencyModel}
+#' @author Olli-Pekka Huovilainen \email{ohuovila@@gmail.com} and Leo Lahti
+#' \email{leo.lahti@@iki.fi}
+#' @seealso Output class for this function: \linkS4class{DependencyModel}.
+#' Special cases: \code{ppca}, \code{pfa}, \code{pcca}
+#' @references Dependency Detection with Similarity Constraints, Lahti et al.,
+#' 2009 Proc. MLSP'09 IEEE International Workshop on Machine Learning for
+#' Signal Processing, \url{http://arxiv.org/abs/1101.5919}
+#' 
+#' A Probabilistic Interpretation of Canonical Correlation Analysis, Bach
+#' Francis R. and Jordan Michael I. 2005 Technical Report 688. Department of
+#' Statistics, University of California, Berkley.
+#' \url{http://www.di.ens.fr/~fbach/probacca.pdf}
+#' 
+#' Probabilistic Principal Component Analysis, Tipping Michael E. and Bishop
+#' Christopher M. 1999. \emph{Journal of the Royal Statistical Society}, Series
+#' B, \bold{61}, Part 3, pp. 611--622.
+#' \url{http://research.microsoft.com/en-us/um/people/cmbishop/downloads/Bishop-PPCA-JRSS.pdf}
+#' 
+#' EM Algorithms for ML Factorial Analysis, Rubin D. and Thayer D. 1982.
+#' \emph{Psychometrika}, \bold{vol. 47}, no. 1.
+#' @keywords math
+#' @examples
+#' #  data(modelData) # Load example data X, Y
+#' #  # probabilistic CCA
+#' #  model <- pcca(X, Y)
+#' #  # dependency model with priors (W>=0; Wx = Wy; full marginal covariances)
+#' #  model <- fit.dependency.model(X, Y, zDimension = 1, 
+#' #      	 	      priors = list(W = 1e-3, Nm.wx.wy.sigma = 0), 
+#' # 			      marginalCovariances = "full")
+#' #  # Getting the latent variable Z when it has been calculated with the model
+#' #  # getZ(model)
+#' 
+#' @export
 fit.dependency.model <- function (X, Y,
           zDimension = 1,
           marginalCovariances = "full",
           epsilon = 1e-3,
-          priors = list(), matched = TRUE,
-          includeData = TRUE, calculateZ = TRUE, verbose = FALSE)
+          priors = list(),
+	  matched = TRUE,
+          includeData = TRUE,
+	  calculateZ = TRUE,
+	  verbose = FALSE)
 {
 
-  # zDimension = 1; marginalCovariances = "full"; H = 1; sigmas = 0; epsilon = 1e-3; mySeed = 123; priors = NULL
-  
   # Fits the generative model
   # X = Wx * z + epsx
   # Y = Wy * z + epsy
@@ -32,12 +146,14 @@ fit.dependency.model <- function (X, Y,
   Y <- dat$Y
   zDimension <- dat$zDimension
   intercept <- dat$intercept
-       
-  # FIXME store/return intercepts as well; further dependency models including intercepts
-  if (!is.null(Y) && (nrow(X) < nrow(Y)) ) {stop("If the two data matrices do not have equal dimensionality, place the smaller one in Y.")} # FIXME automate
+  
+  # FIXME store/return intercepts as well; further dependency models
+  # including intercepts
+  if (!is.null(Y) && (nrow(X) < nrow(Y)) ) {
+    stop("If the two data matrices do not have equal dimensionality, place the smaller one in Y.")
+  } # FIXME automate
   
   if ( !is.null(Y) && !nrow(X) == nrow(Y) ) {
-    #message("The data sets have unequal dimensionality.")
     if ( matched ) { stop("Cannot use matched methods for nonmatched data.") }
   }
 
@@ -45,13 +161,12 @@ fit.dependency.model <- function (X, Y,
   if ( !is.null(priors$Nm.wxwy.sigma ) && priors$Nm.wxwy.sigma == Inf) { matched <- FALSE; message("priors$Nm.wxwy.sigma == Inf; Wx ~ Wy independendent i.e. matched = FALSE") }  
   if ( epsilon == 0 )  { epsilon <- 1e-3 } # avoid numerical overflows
   res <- NA; method <- ""
-  
+
   if (!matched) {
 
     if (verbose) { cat("Model for non-matched case\n") }
 
     if ( is.null(priors$Nm.wxwy.sigma )) {
-      #warning("priors$Nm.wxwy.sigma not implemented for non-matched variables. Setting priors$Nm.wxwy.sigma = Inf.")
       priors$Nm.wxwy.sigma <- Inf
     }
 
@@ -85,13 +200,6 @@ fit.dependency.model <- function (X, Y,
         res$phi$Y <- diag(res$phi$Y, nrow(Y))           
         res$phi$total <- diag(c(diag(res$phi$X),diag(res$phi$Y)), (nrow(X) + nrow(Y)))
 
-        # Update Phi                                         
-	#phi.scalar.x <- unique(diag(phi$X))
-	#phi.scalar.y <- unique(diag(phi$Y))	
-        # modified from calc.pcca.with.isotropic.margins
-        #phi$X <- update.phi.isotropic(Dcov$X, W$X, phi.scalar.x, Dim$X)
-        #phi$Y <- update.phi.isotropic(Dcov$Y, W$Y, phi.scalar.y, Dim$Y) 
-                                                     							      						       							
         method <- "pCCA with isotropic margins"
 	
       } else if (marginalCovariances == "identical isotropic") {
@@ -143,7 +251,7 @@ fit.dependency.model <- function (X, Y,
         
     # Case IIa: fully constrained case Wx = Wy
     if ( priors$Nm.wxwy.sigma == 0 ) { #Wx = Wy        
-        
+
       if ( verbose ) { cat("Assuming Wx = Wy\n") }
 	
       #  SimCCA with full covariances with constraint Wx = Wy
@@ -151,13 +259,12 @@ fit.dependency.model <- function (X, Y,
       #  Denoting Wy = T*Wx = TW; W = Wx this fits the case T = I with
       #  full-rank Wx, Wy, Sigmax, Sigmay: (dxd-matrices where d equals to
       #  number of features in X and Y)
-
       # If prior for W is given, we must optimize W (no analytical
       # solution to EM)
           
       # Regularization for W (W > 0 implemented)
       if (!is.null(priors$W)) {
-            
+
 	if ( verbose ) { cat("Wx = Wy with regularized W (W>=0)\n") }
 	if ( verbose ) { cat(marginalCovariances); cat("\n") }	
 
@@ -168,13 +275,14 @@ fit.dependency.model <- function (X, Y,
         method <- "pCCA with W prior"
 
       } else if (is.null(priors$W)) {
-        
+
 	if ( verbose ) { cat("Wx = Wy; free W.\n") }
 
           # mlsp'09 simcca
           # message("Case Wx = Wy. No regularization for W.")
 	  
 	  # use this for full W (EM algorithm, unstable for n ~ p)
+
          res <- optimize.parameters(X, Y, zDim = zDimension, priors = priors, 
                                    marginalCovariances = marginalCovariances,           
                                    epsilon = epsilon, convergence.steps = 3,
@@ -240,94 +348,8 @@ fit.dependency.model <- function (X, Y,
   model
 }
 
-# FIME: consider whether we should keep this or remove			    
-#pcca.isotropic <- function(X, Y, zDimension = NULL, matched = FALSE, epsilon = 1e-6, includeData = TRUE, calculateZ = TRUE){
-#  if (is.null(zDimension)) { zDimension = min(nrow(X), nrow(Y)) }#
-#
-#  fit.dependency.model(X,Y,zDimension,marginalCovariances = "isotropic", epsilon = 1e-6,
-#                       includeData = includeData, calculateZ = calculateZ)          
-#}                                                                      
-
-pcca <- function (X, Y, zDimension = NULL, includeData = TRUE, calculateZ = TRUE) {
-
-  # (C) 2008-2012 Olli-Pekka Huovilainen and Leo Lahti
-  # License: FreeBSD (keep this notice)
-
-  # replaces: solve.CCA.full
-  
-  # If zDimension given, then
-  # only pick zDimension first principal components
-  # and estimate marginals accordingly
-  # relies on the fact that the principal components
-  # can be estimated consecutively in pCCA
-  
-  # Add here centering of the data matrices X, Y
-  # (center the dimensions to 0)
-
-  dat <- check.data(X, Y, zDimension)
-  X <- dat$X
-  Y <- dat$Y
-  zDimension <- dat$zDimension
-
-  res <- calc.pcca(X, Y, zDimension)
-
-  method <- "pCCA"
-  params <- list(marginalCovariances = "full", zDimension = zDimension)
-  score <- dependency.score( res )
-  model <- new("DependencyModel", W = res$W, phi = res$phi, score = score, method = method, params = params)
-  if ( includeData ) model@data <- list(X = X, Y = Y)
-  if ( calculateZ )  model@z <- z.expectation(model, X, Y) 
-  model
-  
-}
 
 
-calc.pcca <- function (X, Y, zDimension) {
-
-  Dcov <- list()
-  Dcov$X <- cov(t(X))
-  Dcov$Y <- cov(t(Y))
-
-  # Solve W (solve.w utilizes Archambeau06 equations from PCA for shortcut)
-  # FIXME: compare accuracy and speed to direct EM update scheme?
-  W <- solve.w(t(X), t(Y), Dcov$X, Dcov$Y, zDimension)
-
-  # Then take only the zDimension first components if defined
-  W$X <- as.matrix(W$X)
-  W$Y <- as.matrix(W$Y)
-  W$total <- rbind(W$X, W$Y)
-        
-  # estimate
-  phi <- list()
-  phi$X <- Dcov$X - W$X%*%t(W$X)
-  phi$Y <- Dcov$Y - W$Y%*%t(W$Y)
-
-  # Retrieve principal canonical components from the prob.CCA model
-  # assuming that W and phi are known (at least in the full-rank case)
-  # U <- solve.archambeau(X, Y, W$X, W$Y, phi$X, phi$Y)
-
-  list(W = W, phi = phi)
-  
-}
-
-ppca <- function (X, Y = NULL, zDimension = NULL, includeData = TRUE, calculateZ = TRUE) {
-
-  dat <- check.data(X, Y, zDimension)
-  X <- dat$X  
-  Y <- dat$Y
-  zDimension <- dat$zDimension
-
-  res <- calc.ppca(X, Y, zDimension)
-  
-  method <- "pPCA"	
-  params <- list(marginalCovariances = "isotropic", zDimension = zDimension)
-  score <- dependency.score( res )
-  model <- new("DependencyModel", W = res$W, phi = res$phi, score = score, method = method, params = params)
-  if (includeData) { model@data <- list(X = X, Y = Y) }
-  if (calculateZ) { model@z <- z.expectation(model, X, Y) }
-  model
- 	    
-}
 
 # FIXME: now calc.ppca used only in one-data case by function ppca
 # either remove two-data case, or test and compare with fit.dependency.model and take into use
@@ -361,7 +383,6 @@ calc.ppca <- function (X, Y, zDimension) {
     phi <- list(total = diag(res$phi, nrow(X)))
     rownames(res$W) <- rownames(X)
     colnames(phi$total) <- rownames(phi$total) <- rownames(X)
-    #W <- list(X = res$W, total = res$W)
     W <- list(total = res$W)    
   } else {
     # If second argument (Y) given, compute
@@ -434,12 +455,6 @@ ppca.calculate <- function (X, zDimension) {
 
 
 
-
-
-
-
-
-
 Pcca.with.isotropic.margins <- function (X, Y, zDimension = 1, epsilon = 1e-6, delta = 1e6) {
 
   # epsilon and delta are convergence parameters
@@ -494,8 +509,8 @@ calc.pcca.with.isotropic.margins <- function (X, Y, zDimension, epsilon = 1e-6, 
     ##########################################
 
     # Update Phi
-    phi$X <- update.phi.isotropic(Dcov$X, W$X, phi$X, Dim$X) 
-    phi$Y <- update.phi.isotropic(Dcov$Y, W$Y, phi$Y, Dim$Y)
+    phi$X <- update_phi_isotropic(Dcov$X, W$X, phi$X, Dim$X) 
+    phi$Y <- update_phi_isotropic(Dcov$Y, W$Y, phi$Y, Dim$Y)
           
     #######################################
 
@@ -506,7 +521,6 @@ calc.pcca.with.isotropic.margins <- function (X, Y, zDimension, epsilon = 1e-6, 
         phi.inv$Y <- diag(rep(1/phi$Y, Dim$Y))
         phi.inv$total <- diag(c(rep(1/phi$X, Dim$X), rep(1/phi$Y, Dim$Y)))
 
-         #M <- set.M.full(W$total, phi.inv.full) # corresponds to G in Bishop's book
           M <- set.M.full2(W, phi.inv) # modified for G in Bishop's book	  
        beta <- set.beta.fullcov(M, W$total, phi.inv$total)
     W$total <- W.cca.EM(Dcov, M, beta)
