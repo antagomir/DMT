@@ -1,0 +1,978 @@
+Loading 00debian-vars...done
+Loading /etc/emacs/site-start.d/50autoconf.el (source)...done
+Loading /etc/emacs/site-start.d/50dictionaries-common.el (source)...
+Loading debian-ispell...
+Loading /var/cache/dictionaries-common/emacsen-ispell-default.el (source)...done
+Loading debian-ispell...done
+Loading /var/cache/dictionaries-common/emacsen-ispell-dicts.el (source)...done
+Loading /etc/emacs/site-start.d/50dictionaries-common.el (source)...done
+Loading /etc/emacs/site-start.d/50psvn.el (source)...done
+For information about GNU Emacs and the GNU system, type C-h C-a.
+(No changes need to be saved) [2 times]
+Making completion list...
+(No changes need to be saved) [3 times]
+scroll-down-command: Beginning of buffer [13 times]
+Beginning of buffer [11 times]
+(No changes need to be saved) [3 times]
+Mark set
+Auto-saving...
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R
+Beginning of buffer [12 times]
+scroll-down-command: Beginning of buffer
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R
+(No changes need to be saved)
+Buffer update.phi.R has shrunk a lot; auto save disabled in that buffer until next real save
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R
+Mark set [7 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R
+Mark set [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R
+(No changes need to be saved) [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/firstlib.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/firstlib.R
+(No changes need to be saved) [2 times]
+Beginning of buffer [6 times]
+scroll-down-command: Beginning of buffer [10 times]
+Beginning of buffer [4 times]
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R
+(No changes need to be saved)
+(New file)
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/inst/extras/quotes.txt...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/inst/extras/quotes.txt
+(No changes need to be saved) [3 times]
+Making completion list...
+(No changes need to be saved) [2 times]
+Beginning of buffer [4 times]
+(No changes need to be saved)
+Beginning of buffer [5 times]
+Mark set
+Replaced 1 occurrence
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R
+(No changes need to be saved)
+Making completion list...
+scroll-down-command: Beginning of buffer [11 times]
+Beginning of buffer [7 times]
+Mark set
+Replaced 4 occurrences
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+Beginning of buffer
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R
+Mark set
+Replaced 4 occurrences
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R
+Beginning of buffer
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R
+Mark set
+Replaced 0 occurrences
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R
+Mark set
+Replaced 0 occurrences
+(No changes need to be saved)
+Beginning of buffer [13 times]
+Mark set
+Replaced 2 occurrences
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R
+(No changes need to be saved)
+Beginning of buffer
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.W.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.W.R
+Mark set
+Replaced 1 occurrence
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.W.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.W.R
+scroll-down-command: Beginning of buffer [11 times]
+Beginning of buffer [7 times]
+Mark set [2 times]
+Replaced 0 occurrences
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R
+(No changes need to be saved) [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/internals.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/internals.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R
+Mark set [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/firstlib.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/firstlib.R
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer [13 times]
+Beginning of buffer [9 times]
+(No changes need to be saved)
+Directory has changed on disk; type g to update Dired
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/dependency.score.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/dependency.score.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/dependency.score.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/dependency.score.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/dependency.score.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/dependency.score.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/dependency.score.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/dependency.score.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/dependency.score.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/dependency.score.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/dependency.score.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/dependency.score.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/dependency.score.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/dependency.score.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/dependency.score.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/dependency.score.R
+Directory has changed on disk; type g to update Dired
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/internals.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/internals.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/z.expectation.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/z.expectation.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/z.expectation.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/z.expectation.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/z.expectation.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/z.expectation.R
+(No changes need to be saved) [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/z.expectation.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/z.expectation.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R
+scroll-down-command: Beginning of buffer [5 times]
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer [13 times]
+(No changes need to be saved) [2 times]
+Beginning of buffer [15 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.W.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.W.R
+(No changes need to be saved) [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.W.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.W.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.W.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.W.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.W.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.W.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.W.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.W.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.W.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.W.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.W.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.W.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.W.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.W.R
+(No changes need to be saved)
+Making completion list...
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer [15 times]
+(No changes need to be saved) [2 times]
+scroll-down-command: Beginning of buffer [8 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/z.expectation.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/z.expectation.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer [13 times]
+(No changes need to be saved) [3 times]
+Beginning of buffer
+Mark set [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.phi.R
+(No changes need to be saved)
+Making completion list...
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+(No changes need to be saved) [4 times]
+Undo! [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+(No changes need to be saved) [5 times]
+scroll-down-command: Beginning of buffer [12 times]
+(No changes need to be saved) [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/z.expectation.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/z.expectation.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/z.expectation.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/z.expectation.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/z.expectation.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/z.expectation.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/z.expectation.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/z.expectation.R
+(No changes need to be saved) [3 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R
+Making completion list...
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+(No changes need to be saved)
+Making completion list...
+(No changes need to be saved)
+Beginning of buffer
+(No changes need to be saved)
+Making completion list...
+(No changes need to be saved) [2 times]
+Directory has changed on disk; type g to update Dired
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/DependencyModel-accessors.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/DependencyModel-accessors.R
+(No changes need to be saved) [2 times]
+Mark set [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/dependency.score.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/dependency.score.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/dependency.score.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/dependency.score.R
+(No changes need to be saved) [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R
+(No changes need to be saved)
+Directory has changed on disk; type g to update Dired
+scroll-down-command: Beginning of buffer [11 times]
+(No changes need to be saved)
+scroll-up-command: End of buffer [9 times]
+(No changes need to be saved)
+Directory has changed on disk; type g to update Dired
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer [12 times]
+(No changes need to be saved)
+Beginning of buffer [10 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/dependency.score.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/dependency.score.R
+(No changes need to be saved) [2 times]
+scroll-down-command: Beginning of buffer [8 times]
+(No changes need to be saved) [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/get.W.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/get.W.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/get.W.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/get.W.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/get.W.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/get.W.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/get.W.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/get.W.R
+Directory has changed on disk; type g to update Dired
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/internals.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/internals.R
+(No changes need to be saved) [3 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer [14 times]
+(No changes need to be saved)
+Beginning of buffer [6 times]
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R
+Beginning of buffer [6 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R
+(No changes need to be saved) [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R
+(No changes need to be saved) [2 times]
+scroll-down-command: Beginning of buffer [11 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R
+(No changes need to be saved) [2 times]
+Directory has changed on disk; type g to update Dired
+(No changes need to be saved)
+Mark set
+File ~/Rpackages/DMT/devel/dmt/pkg/R/set.beta.R already visited and modified in buffer set.beta.R
+Undo! [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/set.beta.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/set.beta.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/set.beta.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/set.beta.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/set.beta.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/set.beta.R
+Beginning of buffer [6 times]
+(No changes need to be saved) [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/set.M.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/set.M.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/set.M.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/set.M.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/set.M.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/set.M.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/set.M.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/set.M.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/set.M.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/set.M.R
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer [3 times]
+(No changes need to be saved) [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/show-methods.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/show-methods.R
+' is undefined
+(No changes need to be saved)
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/toydata.R
+Mark set [3 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R
+Mark set [9 times]
+Auto-saving...
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R
+Mark set [4 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pfa.R
+(No changes need to be saved) [3 times]
+Directory has changed on disk; type g to update Dired
+scroll-down-command: Beginning of buffer [11 times]
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R
+scroll-down-command: Beginning of buffer
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer [18 times]
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer [20 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.W.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/update.W.R
+(No changes need to be saved)
+Making completion list...
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/firstlib.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/firstlib.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R
+(No changes need to be saved)
+Making completion list...
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer [12 times]
+Beginning of buffer [11 times]
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+(No changes need to be saved)
+Making completion list...
+(No changes need to be saved) [2 times]
+scroll-down-command: Beginning of buffer [11 times]
+Beginning of buffer [17 times]
+Mark set
+Replaced 0 occurrences
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer [9 times]
+Beginning of buffer [13 times]
+(No changes need to be saved)
+Directory has changed on disk; type g to update Dired
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+(New file)
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R
+Auto-saving...done
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R
+Beginning of buffer [5 times]
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R
+scroll-down-command: Beginning of buffer [12 times]
+(No changes need to be saved)
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R
+scroll-down-command: Beginning of buffer [11 times]
+Beginning of buffer [3 times]
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer [2 times]
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R
+scroll-down-command: Beginning of buffer [8 times]
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R
+(No changes need to be saved) [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer
+(No changes need to be saved)
+(New file)
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R
+(No changes need to be saved)
+kill-line: End of buffer [3 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R
+Beginning of buffer [12 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R
+End of buffer [3 times]
+(No changes need to be saved) [2 times]
+End of buffer [4 times]
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer [13 times]
+query-replace-read-from: Command attempted to use minibuffer while in minibuffer
+pcca: exited abnormally with code 127.
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+Mark set
+(No changes need to be saved)
+Auto-saving...done
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer [8 times]
+Beginning of buffer [4 times]
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R
+Mark set [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R
+(No changes need to be saved)
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pcca.R
+Beginning of buffer [6 times]
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R
+Auto-saving...done
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/ppca.R
+(No changes need to be saved) [2 times]
+Beginning of buffer [8 times]
+(No changes need to be saved) [2 times]
+Setting up indent for shell type sh
+Indentation variables are now local.
+Indentation setup for shell type sh
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/inst/extras/build.cran.sh...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/inst/extras/build.cran.sh
+(No changes need to be saved) [3 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/vignettes/dmt.Rnw...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/vignettes/dmt.Rnw
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/vignettes/dmt.Rnw...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/vignettes/dmt.Rnw
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/vignettes/dmt.Rnw...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/vignettes/dmt.Rnw
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/vignettes/dmt.Rnw...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/vignettes/dmt.Rnw
+<left-fringe> <drag-mouse-1> is undefined [2 times]
+(No changes need to be saved)
+Making completion list...
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer [13 times]
+Mark set
+Replaced 0 occurrences
+(No changes need to be saved) [3 times]
+scroll-down-command: Beginning of buffer
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R
+(New file)
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/centerData.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/centerData.R
+scroll-down-command: Beginning of buffer [2 times]
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R
+scroll-down-command: Beginning of buffer [12 times]
+Beginning of buffer [9 times]
+Mark set
+Replaced 0 occurrences
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer [11 times]
+Beginning of buffer [14 times]
+Mark set
+Replaced 0 occurrences
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer
+Mark set
+(No changes need to be saved) [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R
+scroll-down-command: Beginning of buffer [3 times]
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer [4 times]
+(No changes need to be saved) [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+(No changes need to be saved) [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+scroll-down-command: Beginning of buffer [5 times]
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+scroll-down-command: Beginning of buffer [13 times]
+Mark set
+(No changes need to be saved) [3 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+(New file)
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/calc.pcca.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/calc.pcca.R
+scroll-down-command: Beginning of buffer [12 times]
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+(No changes need to be saved)
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+(No changes need to be saved)
+Auto-saving...done
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+(No changes need to be saved)
+Mark set [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/fit.dependency.model.R
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer [10 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R
+(No changes need to be saved)
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/optimize.parameters.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R
+Beginning of buffer [8 times]
+Mark set
+Auto-saving...done
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R
+Mark set [4 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R
+Mark set [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R
+scroll-down-command: Beginning of buffer [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/utilities.R
+(No changes need to be saved) [3 times]
+scroll-down-command: Beginning of buffer [14 times]
+Mark set
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer [13 times]
+Beginning of buffer [9 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/DependencyModel-accessors.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/DependencyModel-accessors.R
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/DependencyModel-accessors.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/DependencyModel-accessors.R
+Mark set [6 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/DependencyModel-accessors.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/DependencyModel-accessors.R
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer [14 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R
+scroll-down-command: Beginning of buffer [14 times]
+(No changes need to be saved) [2 times]
+Mark set [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R
+(No changes need to be saved) [2 times]
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R
+(No changes need to be saved) [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R
+scroll-up-command: End of buffer [2 times]
+(No changes need to be saved) [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R
+(No changes need to be saved) [2 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/drcca-functions.R
+(No changes need to be saved) [2 times]
+scroll-down-command: Beginning of buffer [12 times]
+(No changes need to be saved) [2 times]
+Beginning of buffer
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/AllClasses.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/AllClasses.R
+(No changes need to be saved) [2 times]
+Saving file /home/lei/Rpackages/pint/DESCRIPTION...
+Wrote /home/lei/Rpackages/pint/DESCRIPTION
+Making completion list...
+Mark set [7 times]
+Saving file /home/lei/Rpackages/pint/R/firstlib.R...
+Wrote /home/lei/Rpackages/pint/R/firstlib.R
+Mark set
+Saving file /home/lei/Rpackages/pint/R/firstlib.R...
+Wrote /home/lei/Rpackages/pint/R/firstlib.R
+Mark set
+Saving file /home/lei/Rpackages/pint/R/firstlib.R...
+Wrote /home/lei/Rpackages/pint/R/firstlib.R
+Mark set
+Saving file /home/lei/Rpackages/pint/R/firstlib.R...
+Wrote /home/lei/Rpackages/pint/R/firstlib.R
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/pint/R/firstlib.R...
+Wrote /home/lei/Rpackages/pint/R/firstlib.R
+(No changes need to be saved)
+kill-line: End of buffer [4 times]
+Saving file /home/lei/Rpackages/pint/R/firstlib.R...
+Wrote /home/lei/Rpackages/pint/R/firstlib.R
+(No changes need to be saved)
+Mark set
+Beginning of buffer [2 times]
+Saving file /home/lei/Rpackages/pint/R/firstlib.R...
+Wrote /home/lei/Rpackages/pint/R/firstlib.R
+(No changes need to be saved)
+kill-line: End of buffer [3 times]
+Saving file /home/lei/Rpackages/pint/R/firstlib.R...
+Wrote /home/lei/Rpackages/pint/R/firstlib.R
+(No changes need to be saved)
+Beginning of buffer [3 times]
+Auto-saving...done
+Saving file /home/lei/Rpackages/pint/DESCRIPTION...
+Wrote /home/lei/Rpackages/pint/DESCRIPTION
+Saving file /home/lei/Rpackages/pint/DESCRIPTION...
+Wrote /home/lei/Rpackages/pint/DESCRIPTION
+Mark set [2 times]
+Saving file /home/lei/Rpackages/pint/DESCRIPTION...
+Wrote /home/lei/Rpackages/pint/DESCRIPTION
+Saving file /home/lei/Rpackages/pint/DESCRIPTION...
+Wrote /home/lei/Rpackages/pint/DESCRIPTION
+End of buffer [6 times]
+(No changes need to be saved) [3 times]
+Making completion list...
+(No changes need to be saved) [3 times]
+Saving file /home/lei/Rpackages/pint/R/firstlib.R...
+Wrote /home/lei/Rpackages/pint/R/firstlib.R
+Saving file /home/lei/Rpackages/pint/R/firstlib.R...
+Wrote /home/lei/Rpackages/pint/R/firstlib.R
+(No changes need to be saved) [2 times]
+Beginning of buffer [5 times]
+(No changes need to be saved)
+kill-line: End of buffer
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/AllClasses.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/AllClasses.R
+(No changes need to be saved)
+Mark set
+Saving file /home/lei/Rpackages/pint/R/AllClasses.R...
+Wrote /home/lei/Rpackages/pint/R/AllClasses.R
+(No changes need to be saved) [2 times]
+Saving file /home/lei/Rpackages/pint/R/firstlib.R...
+Wrote /home/lei/Rpackages/pint/R/firstlib.R
+(No changes need to be saved) [2 times]
+scroll-down-command: Beginning of buffer [13 times]
+(No changes need to be saved) [2 times]
+scroll-down-command: Beginning of buffer [4 times]
+Mark set
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/pkg-package.R
+scroll-down-command: Beginning of buffer
+(No changes need to be saved) [3 times]
+Beginning of buffer [4 times]
+(No changes need to be saved) [2 times]
+Saving file /home/lei/Rpackages/pint/R/AllClasses.R...
+Wrote /home/lei/Rpackages/pint/R/AllClasses.R
+(No changes need to be saved) [5 times]
+Beginning of buffer [5 times]
+(No changes need to be saved)
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/AllClasses.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/AllClasses.R
+(No changes need to be saved) [3 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/AllClasses.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/AllClasses.R
+(No changes need to be saved)
+Directory has changed on disk; type g to update Dired
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer [10 times]
+(No changes need to be saved)
+scroll-down-command: Beginning of buffer [8 times]
+(No changes need to be saved) [2 times]
+scroll-down-command: Beginning of buffer [14 times]
+(No changes need to be saved) [5 times]
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/firstlib.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/firstlib.R
+Saving file /home/lei/Rpackages/DMT/devel/dmt/pkg/R/firstlib.R...
+Wrote /home/lei/Rpackages/DMT/devel/dmt/pkg/R/firstlib.R
+previous-buffer: Cannot switch buffers in minibuffer window [2 times]

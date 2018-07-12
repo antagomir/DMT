@@ -1,0 +1,61 @@
+
+R version 3.3.1 (2016-06-21) -- "Bug in Your Hair"
+Copyright (C) 2016 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> # Package release instructions: http://r-pkgs.had.co.nz/release.html
+> 
+> # Documentation, Build and Check
+> library(devtools)
+> document("../../")
+Updating dmt documentation
+Loading dmt
+> 
+> 
+> #build("../../")
+> #build(vignettes = FALSE)
+> #check("../../", vignettes = FALSE)
+> 
+> # Submissions:
+> #
+> # release() # Submit to CRAN
+> # submit_cran() # Submit to CRAN without all release() questions
+> 
+> # Utilities:
+> #
+> # build_win("../../") # Windows check
+> # revdep_check("../../")
+> # add_rstudio_project("../../")
+> # use_build_ignore("../NEWS.md", pkg = "../../") # NEWS.md not supported by CRAN
+> # use_package("dplyr") # add package to imports
+> # load_all(".") # Reload the package
+> # test() # Run tests
+> # run_examples()
+> 
+> # Vignettes:
+> #
+> # library(knitr)
+> # knit("../../vignettes/eurostat_tutorial.Rmd", "../../vignettes/eurostat_tutorial.md")
+> 
+> 
+> 
+> 
+> proc.time()
+   user  system elapsed 
+  1.712   0.248   1.713 

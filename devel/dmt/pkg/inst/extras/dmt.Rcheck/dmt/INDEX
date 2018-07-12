@@ -1,0 +1,24 @@
+DependencyModel-class   Class DependencyModel
+centerData              Center Data Matrix
+compare.estimate.and.truth
+                        Measuring Model Accuracy
+dependency.score        Dependency Score
+drCCAcombine            A function to combine several data sets
+expdata                 Example data for drCCA
+fit.dependency.model    Fit dependency model between two data sets.
+generate.toydata        Toy Data Generation
+modelData               An example data set
+pcca                    Probabilistic CCA
+pfa                     Probabilistic Factor Analysis
+pfa.neg.log.likelihood
+                        Likelihood for the models.
+plotVar                 Data-specific and shared variance for several
+                        dimensionalities
+ppca                    Probabilistic PCA
+regCCA                  Generalized Canonical Correlation Analysis
+sharedVar               Shared variation retained in the combined drCCA
+                        representation
+specificVar             Data-specific variation retained in the
+                        combined drCCA representation
+update_phi_isotropic    Update Phi (Isotropic)
+z.expectation           Expectation of the latent variable.
